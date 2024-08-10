@@ -3,7 +3,6 @@ import { itemData } from '../../data'
 
 const ItemsDisplay = () => {
     const [displayItem, setDisplayItem] = useState(itemData)
-    console.log("this is data", displayItem);
     
   return (
    <div className="itemSection">
