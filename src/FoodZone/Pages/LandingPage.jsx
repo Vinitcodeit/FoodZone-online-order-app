@@ -14,7 +14,6 @@ const LandingPage = () => {
       <ItemsDisplay />
       <Chains />
       <FirmCollection />
-      <ProductMenu />
       </div>
     </div>
   )

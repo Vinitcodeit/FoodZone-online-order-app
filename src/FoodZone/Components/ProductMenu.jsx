@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { API_URL } from '../api'
 import { useParams } from 'react-router-dom'
+import TopBar from './TopBar'
 
 const ProductMenu = () => {
     const [products, setProducts] = useState([])
@@ -23,9 +24,30 @@ const ProductMenu = () => {
     },[])
 
   return (
-    <div>
-     <h3>This is firm Id {firmId}</h3>
-    </div>
+    <>
+    <TopBar />
+        <section className='productSection'>
+    {products.map((item)=>{
+        return(
+          <div className='productBox'>
+          <div>
+          <div><strong>{item.productName}</strong> </div>
+          <div>₹{item.price}</div>
+           <div>  {item.description}</div>
+          </div>
+        
+         
+           <div className="productGroup">
+                                <img src={`${API_URL}/uploads/${item.image}`} />
+                                <div className='addButton'>ADD</div>
+            
+                            </div>
+          </div>
+        )
+
+     })}
+    </section>
+    </>
   )
 }
 

@@ -111,4 +111,44 @@ width: 150px;
   color: gray;
 }
 
+/* product Section */
+
+.productSection{
+  display: flex;
+  flex-direction: column;
+  padding: 0 150px;
+  margin-top: 50px;
+}
+
+.productBox{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  border-top: 2px solid lightgray;
+  position: relative;
+}
+
+.productGroup img{
+  width: 100px;
+  border-radius: 5px;
+}
+
+.addButton{
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  color: green;
+  border: 1px solid lightgray;
+  position:absolute;
+  bottom: 10px;
+  width: 100%;
+  max-width: 80px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.link{
+  color: black;
+}
+
 
