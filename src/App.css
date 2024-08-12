@@ -13,6 +13,19 @@ body{
   align-items: center;
  padding: 0 100px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  position: fixed;
+  width: 90%;
+  min-width:80%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: white;
+}
+
+.companyTitle h2{
+  color: orangered;
+  text-decoration: none;
+
 }
 
 /* item section */
@@ -20,7 +33,7 @@ body{
 .itemSection{
   display: flex;
   width: 100%;
-  margin-top: 40px;
+  margin-top: 100px;
   box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px -1px rgba(0,0,0,0.1);
 }
 
@@ -117,7 +130,8 @@ width: 150px;
   display: flex;
   flex-direction: column;
   padding: 0 150px;
-  margin-top: 50px;
+  margin-top: 100px;
+  
 }
 
 .productBox{
@@ -153,6 +167,7 @@ width: 150px;
 
 .link{
   color: black;
+  text-decoration: none;
 }
 
 

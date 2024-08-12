@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const FirmCollection = () => {
   const [firmData, setFirmData] = useState([]);
+  const [selectedRegion, setSelectedRegion] = useState('All')
 
   const firmDataHandler = async () => {
     try {
@@ -20,16 +21,30 @@ const FirmCollection = () => {
     firmDataHandler();
   }, []);
 
+  const filterHandler = (region) =>{
+    setSelectedRegion(region)
+  }
+
   return (
     <>
       <h3>Restaurants with online food delivery in Bangalore</h3>
+      <div className="filterButton">
+        <button onClick={()=>filterHandler("All")} >All</button>
+        <button onClick={()=>filterHandler("South-Indian")}>South-Indian</button>
+        <button onClick={()=>filterHandler("North-Indian")}>North-Indian</button>
+        <button onClick={()=>filterHandler("Chinese")}>Chinese</button>
+        <button onClick={()=>filterHandler("Bakery")}>Bakery</button>
+      </div>
+
       <section className="firmSection">
         {firmData.map((apple) => {
-          return (
-            <>
-              {apple.firm.map((item) => {
+          return apple.firm.map((item)=>{
+            if(selectedRegion === "All" || item.region.includes(selectedRegion.toLocaleLowerCase())){
                 return (
-                  <Link to={`/products/${item._id}`} className="link">
+                  <Link
+                    to={`/products/${item._id}/${item.firmName}`}
+                    className="link"
+                  >
                     <div className="firmGroupBox">
                       <div className="firmGroup">
                         <img src={`${API_URL}/uploads/${item.image}`} />
@@ -44,9 +59,10 @@ const FirmCollection = () => {
                     </div>
                   </Link>
                 );
-              })}
-            </>
-          );
+              
+            }
+          })
+          return null;
         })}
       </section>
     </>

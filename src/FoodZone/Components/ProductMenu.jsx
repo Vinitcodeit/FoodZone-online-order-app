@@ -5,7 +5,7 @@ import TopBar from './TopBar'
 
 const ProductMenu = () => {
     const [products, setProducts] = useState([])
-    const {firmId} = useParams()
+    const {firmId, firmName} = useParams()
 
     const productHandler = async()=>{
         try {
@@ -27,6 +27,7 @@ const ProductMenu = () => {
     <>
     <TopBar />
         <section className='productSection'>
+        <h3>{firmName}</h3>
     {products.map((item)=>{
         return(
           <div className='productBox'>
