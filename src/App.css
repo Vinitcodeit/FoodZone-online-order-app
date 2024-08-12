@@ -146,6 +146,10 @@ width: 150px;
   margin-left: 10px;
   cursor: pointer;
 }
+.addButton:hover{
+  background-color: rgb(230, 226, 226);
+}
+
 
 .link{
   color: black;
