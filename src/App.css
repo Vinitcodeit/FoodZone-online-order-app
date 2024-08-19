@@ -144,6 +144,21 @@ width: 150px;
   color: gray;
 }
 
+.filterButton{
+margin-bottom: 20px;
+display: flex;
+justify-content: space-around;
+}
+.filterButton button{
+  width: 10rem;
+  padding: 5px 0px;
+  border-radius: 5px;
+}
+
+.activeButton{
+  background-color: darkblue;
+  color: white;
+}
 /* product Section */
 
 .productSection{
@@ -206,6 +221,17 @@ width: 150px;
   .topBarSection{
     padding: 0 20px;
   }
+  .topBarSection h2{
+    font-size: small;
+  }
+  .searchBar{
+    width: 170px;
+  }
+
+  .userAuth{
+    font-size: small;
+  }
+  
  .itemSection{
   margin-top: 80px;
  }
@@ -254,6 +280,16 @@ width: 300px;
 .productSection h3{
   text-align: center;
   background-color: orange;
+}
+.filterButton{
+
+
+}
+.filterButton button{
+  border: 1px solid red;
+  width: 5rem;
+  padding: 5px;
+  margin-right: 5px;
 }
 }
 
