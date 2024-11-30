@@ -35,7 +35,7 @@ const FirmCollection = () => {
         <button onClick={()=>filterHandler("South-Indian", 'south-indian')} className={activeCategory === 'south-indian' ? 'activeButton' : ''}>South-Indian</button>
         <button onClick={()=>filterHandler("North-Indian", 'north-indian')} className={activeCategory === 'north-indian' ? 'activeButton' : ''}>North-Indian</button>
         <button onClick={()=>filterHandler("Chinese", 'chinese')} className={activeCategory === 'chinese' ? 'activeButton' : ''}>Chinese</button>
-        <button onClick={()=>filterHandler("Bakery", 'backery')} className={activeCategory === 'bakery' ? 'activeButton' : ''}>Bakery</button>
+        <button onClick={()=>filterHandler("Bakery", 'bakery')} className={activeCategory === 'bakery' ? 'activeButton' : ''}>Bakery</button>
       </div>
 
       <section className="firmSection">
