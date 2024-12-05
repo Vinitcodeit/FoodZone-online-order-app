@@ -96,6 +96,13 @@ const Chains = () => {
                         <Link to={`/products/${item._id}/${item.firmName}`} className="link" key={item._id}>
                         <div className="firmImage">
                                     <img src= {`${API_URL}/uploads/${item.image}`} />
+                                    <div>
+                                   <strong>{item.firmName}</strong>
+                       
+                        <br />
+                        <div className="firmArea">{item.region.join(", ")}</div>
+                        <div className="firmArea">{item.area}</div>
+                      </div>
                                 </div>
                         </Link>
                       </>
@@ -111,3 +118,4 @@ const Chains = () => {
 };
 
 export default Chains;
+
